@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        
+        .Calculator{
+            height: 400px;
+            background-color: greenyellow;
+            position: absolute;
+            top: 200px;
+            left: 550px;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="Calculator">
+        <h2>simple inerest Calculator</h2>
+       <label for="amount">principal Amount</label>
+       <br>
+       <input type="number" placeholder="Enter Principal Amount" id="amount">
+       <br>
+       <label for="Rate">Rate (%)</label>
+       <br>
+       <input type="number" placeholder="Enter Rate" id="Rate">
+       <br>
+       <label for="Time">Time</label>
+       <br>
+       <input type="number" placeholder="Enter Time" id="Time">
+       <br>
+       <button onclick="answer()">Calculate</button>
+       <p>Principal Amount :<span id="output_1"></span></p>
+       <p>Total Interset :<span id="output_2"></span></p>
+       <p>Total value :<span id="output_3"></span></p>
+
+
+
+    </div>
+    <script>
+        function answer(){
+            var amount_input=parseInt(document.getElementById("amount").value);
+            var Rate_input=parseInt(document.getElementById("Rate").value);
+            var Time_input=parseInt(document.getElementById("Time").value);
+
+            var inerest=amount_input* Rate_input*Time_input/100;
+            var Total=inerest+amount_input;
+
+            document.getElementById("output_1").
+            innerHTML=amount_input;
+            document.getElementById("output_2").
+            innerHTML=inerest;
+            document.getElementById("output_3").
+            innerHTML=Total;
+        }
+    </script>
+</body>
+</html>
